@@ -9,7 +9,7 @@ pipeline {
              }
         stage('Build') {
              steps {
-                sh 'mvn clean compile'  // If using Gradle, use 'gradle build'
+                bat script: 'mvn clean compile'  // If using Gradle, use 'gradle build'
                  }
              }
 

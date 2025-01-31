@@ -9,7 +9,7 @@ pipeline {
              }
         stage('Run Cucumber Tests') {
             steps {
-                bat script: 'mvn test'  // Runs Cucumber tests
+                bat "mvn test -Dcucumber.options='classpath:Features/Sample.feature'"
             }
         }
     }

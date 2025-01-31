@@ -7,15 +7,9 @@ pipeline {
                 echo 'pipeline successfully created'
                  }
              }
-        stage('Build') {
-             steps {
-                bat script: 'mvn clean compile'  // If using Gradle, use 'gradle build'
-                 }
-             }
-
         stage('Run Cucumber Tests') {
             steps {
-                sh 'mvn test'  // Runs Cucumber tests
+                bat script: 'mvn test'  // Runs Cucumber tests
             }
         }
     }
